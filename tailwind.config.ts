@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -46,6 +47,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        // ALT-FIX custom colors
+        tech: {
+          blue: "hsl(var(--tech-blue))",
+          dark: "hsl(var(--tech-dark))",
+          light: "hsl(var(--tech-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
