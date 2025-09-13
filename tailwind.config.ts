@@ -49,10 +49,13 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         // ALT-FIX custom colors
-        tech: {
-          blue: "hsl(var(--tech-blue))",
-          dark: "hsl(var(--tech-dark))",
-          light: "hsl(var(--tech-light))",
+        altfix: {
+          blue: "hsl(var(--altfix-blue))",     /* #38bdf8 */
+          dark: "hsl(var(--altfix-dark))",     /* #0b1220 */
+          section: "hsl(var(--altfix-section))", /* #0f172a */
+          card: "hsl(var(--altfix-card))",     /* #1e293b */
+          text: "hsl(var(--altfix-text))",     /* #e2e8f0 */
+          muted: "hsl(var(--altfix-muted))",   /* #94a3b8 */
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

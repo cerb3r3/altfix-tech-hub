@@ -8,49 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 13% 18%;
+    --background: 221 39% 11%;  /* #0b1220 - fond principal */
+    --foreground: 210 40% 90%;  /* #e2e8f0 - texte principal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card: 221 47% 17%;        /* #0f172a - sections */
+    --card-foreground: 210 40% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --popover: 221 47% 17%;
+    --popover-foreground: 210 40% 90%;
 
-    /* ALT-FIX Brand Colors - Sky blue primary */
-    --primary: 197 71% 73%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 197 71% 85%;
+    /* ALT-FIX Brand Colors */
+    --primary: 199 89% 48%;     /* #38bdf8 - bleu ciel principal */
+    --primary-foreground: 221 39% 11%;
+    --primary-glow: 199 89% 70%;
 
-    /* Dark secondary using black */
-    --secondary: 220 13% 18%;
-    --secondary-foreground: 0 0% 100%;
+    /* Cartes plus sombres */
+    --secondary: 220 13% 18%;   /* #1e293b - cartes */
+    --secondary-foreground: 210 40% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 28% 17%;       /* #1e293b */
+    --muted-foreground: 215 20% 65%; /* #94a3b8 */
 
-    --accent: 197 71% 85%;
-    --accent-foreground: 220 13% 18%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 221 39% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 197 71% 73%;
+    --border: 215 28% 25%;
+    --input: 215 28% 25%;
+    --ring: 199 89% 48%;
 
-    /* ALT-FIX specific design tokens */
-    --tech-blue: 197 71% 73%;
-    --tech-dark: 220 13% 18%;
-    --tech-light: 197 71% 95%;
+    /* Design tokens ALT-FIX */
+    --altfix-blue: 199 89% 48%;    /* #38bdf8 */
+    --altfix-dark: 221 39% 11%;    /* #0b1220 */
+    --altfix-section: 221 47% 17%; /* #0f172a */
+    --altfix-card: 220 13% 18%;    /* #1e293b */
+    --altfix-text: 210 40% 90%;    /* #e2e8f0 */
+    --altfix-muted: 215 20% 65%;   /* #94a3b8 */
     
-    /* Gradients */
+    /* Gradients améliorés */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-dark: linear-gradient(135deg, hsl(var(--secondary)), hsl(220 13% 12%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.05));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--background)), hsl(var(--card)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--card)));
     
-    /* Shadows */
-    --shadow-tech: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    /* Shadows avec la couleur principale */
+    --shadow-altfix: 0 10px 30px -10px hsl(var(--primary) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.1);
     --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
     
@@ -140,8 +143,8 @@ All colors MUST be HSL.
     background: var(--gradient-hero);
   }
   
-  .shadow-tech {
-    box-shadow: var(--shadow-tech);
+  .shadow-altfix {
+    box-shadow: var(--shadow-altfix);
   }
   
   .shadow-card {
@@ -160,10 +163,42 @@ All colors MUST be HSL.
     transition: var(--transition-bounce);
   }
   
-  .tech-pattern {
+  .altfix-pattern {
     background-image: 
       radial-gradient(circle at 25px 25px, hsl(var(--primary) / 0.1) 2px, transparent 0),
       radial-gradient(circle at 75px 75px, hsl(var(--accent) / 0.1) 1px, transparent 0);
     background-size: 100px 100px;
+  }
+
+  /* WhatsApp floating button */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  }
+
+  /* Animations pour les cartes */
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-altfix);
   }
 }

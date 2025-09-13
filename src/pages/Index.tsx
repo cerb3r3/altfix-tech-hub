@@ -1,21 +1,23 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import ContactSection from "@/components/ContactSection";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
+import AltFixHeader from "@/components/AltFixHeader";
+import AltFixHero from "@/components/AltFixHero";
+import AltFixValues from "@/components/AltFixValues";
+import AltFixServices from "@/components/AltFixServices";
+import AltFixTarifs from "@/components/AltFixTarifs";
+import AltFixContact from "@/components/AltFixContact";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <div className="min-h-screen bg-background">
+      <AltFixHeader />
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <FAQSection />
-        <ContactSection />
+        <AltFixHero />
+        <AltFixValues />
+        <AltFixServices />
+        <AltFixTarifs />
+        <AltFixContact />
       </main>
-      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
