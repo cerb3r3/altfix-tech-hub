@@ -13,7 +13,7 @@ import {
   Download
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import jsPDF from 'jspdf';
+import { jsPDF } from 'jspdf';
 
 const AltFixContact = () => {
   const [formData, setFormData] = useState({
